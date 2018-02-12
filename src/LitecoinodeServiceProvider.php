@@ -3,7 +3,7 @@
 namespace Adelphia\Litecoinode;
 
 use Illuminate\Support\ServiceProvider;
-use Adelphia\Bitcoinode\Litecoinode;
+use Adelphia\Litecoinode\LitecoinCall;
 
 class LitecoinodeServiceProvider extends ServiceProvider
 {
@@ -25,8 +25,8 @@ class LitecoinodeServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        $this->app->bind('Litecoinode', function(){
-            return new Litecoinode;
+        $this->app->bind('LitecoinCall', function(){
+            return new LitecoinCall;
         });
     }
 }

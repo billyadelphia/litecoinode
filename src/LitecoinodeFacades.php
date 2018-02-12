@@ -6,6 +6,6 @@ use Illuminate\Support\Facades\Facade;
 
 class LitecoinodeFacades extends Facade {
 
-    protected static function getFacadeAccessor() { return 'Litecoinode'; }
+    protected static function getFacadeAccessor() { return 'LitecoinCall'; }
 
 }

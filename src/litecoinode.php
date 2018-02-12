@@ -185,7 +185,7 @@ class Litecoinode
         if (!empty($curl_error)) {
             $this->error = $curl_error;
         }
-
+       // dd($this->status);
         if ($this->response['error']) {
             // If bitcoind returned an error, put that in $this->error
             $this->error = $this->response['error']['message'];
@@ -208,7 +208,7 @@ class Litecoinode
         }
 
         if ($this->error) {
-            return false;
+            return $this->error;
         }
 
         return $this->response['result'];
