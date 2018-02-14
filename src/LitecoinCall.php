@@ -42,5 +42,12 @@ class LitecoinCall
         return $this->ltc->listtransactions($account, $count, $from);
     }
 
+    public function getnewaddress($label)
+    {
+        $address['address'] = $this->ltc->getnewaddress($label);
+        $address['key'] = null;
+        return $address;
+    }
+
     //public function g
 }
