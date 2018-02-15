@@ -54,5 +54,13 @@ class LitecoinCall
         return $this->ltc->sendtoaddress($address, $ammount);
     }
 
-    //public function g
+    public function sendfrom($from_label, $to_address, $amount)
+    {
+        return $this->ltc->sendfrom($from_label, $to_address, $amount);
+    }
+
+    public function move($from_label, $to_label, $amount)
+    {
+        return $this->ltc->move($from_label, $to_label, $amount);
+    }
 }
