@@ -49,5 +49,10 @@ class LitecoinCall
         return $address;
     }
 
+    public function sendtoaddress($address, $ammount)
+    {
+        return $this->ltc->sendtoaddress($address, $ammount);
+    }
+
     //public function g
 }
