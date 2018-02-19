@@ -29,7 +29,7 @@ class LitecoinCall
 
     public function getinfo()
     {
-       return $this->ltc->getinfo() ;
+       return $this->ltc->getwalletinfo() ;
     }
 
     public function getbalance($account = '')
